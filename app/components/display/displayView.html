@@ -1,0 +1,63 @@
+<div ng-controller="displayController as display">
+  <div class="app container">
+    <div class="jumbotron app-header">
+    <h1>My Super Awesome Photos</h1>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-3">
+        <table class="table table-bordered">
+        <thead>
+          <th>Photos in this Album</th>
+        </thead>
+        <tbody>
+          <tr ng-repeat="photo in display.photoArray | orderBy:'orderCount' ">
+            <td><a class="photo-title" ng-click="display.updatePhoto(photo)">{{photo.title}}</a></td>
+          </tr>
+        </tbody>
+        </table>
+
+        <div class="rating-area">
+          <div class="dropdown" ng-show="display.selectedPhoto">
+
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Rating
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+              <li><a href="#" ng-click="display.updateRating(1)"><span class="glyphicon glyphicon-star"></span></a></li>
+
+              <li><a href="#" ng-click="display.updateRating(2)"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></a></li>
+
+              <li><a href="#" ng-click="display.updateRating(3)"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></a></li>
+
+              <li><a href="#" ng-click="display.updateRating(4)"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></a></li>
+
+            </ul>
+          </div>
+
+          <div class="star-display">
+            <div ng-show="display.oneStar"><span class="glyphicon glyphicon-star"></span></div>
+
+            <div ng-show="display.twoStars"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
+
+            <div ng-show="display.threeStars"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
+
+            <div ng-show="display.fourStars"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></div>
+
+          </div>
+        </div> <!-- /rating area -->   
+      </div>
+
+      <div class="col-md-9">
+        <div><img src="{{display.imageUrl}}"/></div>
+        <div  ng-show="display.selectedPhoto" class="caption">{{display.caption}}
+        <div class="count" ng-show="display.orderCount">{{display.orderCount}} of {{display.photoArray.length}}</div>
+        </div>
+      </div>
+
+    </div> <!-- /row -->
+  </div> <!-- /app -->
+</div>
