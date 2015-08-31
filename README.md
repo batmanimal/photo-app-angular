@@ -1,4 +1,6 @@
-## Photo Album App, built using Angular
+## My Super Awesome Photos
+
+Photo album app, built using Angular
 
 Screenshots 
 
