@@ -1,6 +1,6 @@
 ## My Super Awesome Photos
 
-Photo album app, built using Angular
+###Photo album app, built using Angular
 
 Screenshots 
 
@@ -27,9 +27,10 @@ Screenshots
 
 - Simple Node/Express server 
 
+[Product Backlog](https://github.com/batmanimal/photo-app-angular/issues)
+
 ### Related Projects
 
 - Check out the same app implementation in [React](https://github.com/batmanimal/photo-app-react)
 - Check it out in [Backbone](https://github.com/batmanimal/photo-app-backbone)
-
 
