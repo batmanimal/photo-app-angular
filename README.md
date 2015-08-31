@@ -1,6 +1,5 @@
-## My Super Awesome Photos
-
-###Photo album app, built using Angular
+# PhotoMVC - Angular
+###My Super Awesome Photos
 
 Screenshots 
 
